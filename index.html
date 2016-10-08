@@ -10,28 +10,32 @@
   </head>
   <body>
   <div id="listHeader" class="header">
-    <h2> LOGO </h2>
+    <img src="images/logo.png" alt="App Logo" height="50px" width="auto" class="logo">
   </div>
 <!--   <div class="navbar"> -->
   <ul>
-    <li><a class="active" href="#home">Groups</a></li>
-    <li><a href="#home">Gifts</a></li>
+    <li><a href="#home">Groups</a></li>
+    <li><a class="active" href="#home">Gifts</a></li>
   </ul>
 <!--   </div> -->
-  <div>
+
+  <div class="headerDIV">
     <h1> Steve Anderson</h1>
-    <i class="fa fa-plus-circle"></i>
+    <i id="show" class="fa fa-plus-circle"></i>
   </div>
-  <div id="headerDIV">
+<div id="showHideList" class="fullList">
+  <div class="bodyDIV">
       <input type="text" id="gname" placeholder="Gift Name"><br>
-      <input type="text" id="budget" placeholder="Gift Price"><br>
+      <input type="text" id="budget" placeholder="Gift Price ($0.00)"><br>
       <span onclick="newGift()" class="addBtn">Add</span>
-      <a href="#"> Cancel </a>
+<!--       <button id="hide" class="cancelBtn"> Cancel </button> -->
   </div>
   <ul id="listUL">
-    <li>Golf Balls</li>
+    
   </ul>
+</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="js/showHide.js"></script>
   <script src="js/script.js"></script>
   </body>
 </html>
