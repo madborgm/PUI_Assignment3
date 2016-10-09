@@ -6,7 +6,15 @@
     <title>title</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("i").click(function(){
+          $(".fullList").show(500);
+          // console.log("itworked")
+      });
+    });
+    </script>
   </head>
   <body>
   <div id="listHeader" class="header">
@@ -21,9 +29,9 @@
 
   <div class="headerDIV">
     <h1> Steve Anderson</h1>
-    <i id="show" class="fa fa-plus-circle"></i>
+    <i class="fa fa-plus-circle"></i>
   </div>
-<div id="showHideList" class="fullList">
+<div class="fullList">
   <div class="bodyDIV">
       <input type="text" id="gname" placeholder="Gift Name"><br>
       <input type="text" id="budget" placeholder="Gift Price ($0.00)"><br>
@@ -34,8 +42,6 @@
     
   </ul>
 </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="js/showHide.js"></script>
   <script src="js/script.js"></script>
   </body>
 </html>

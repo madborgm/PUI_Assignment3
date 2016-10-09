@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("#show").click(function(){
-        $("#showHideList").toggleClass("fullList");
+    $("button").click(function(){
+        $("p").removeClass("intro");
     });
+    console.log("itworked")
 });

@@ -1,11 +1,3 @@
-$(document).ready(function(){
-    $("i").click(function(){
-        $(".fullList").show(1000);
-    });
-});
-
-
-
 //close button appended to each list item
 var nodeList = document.getElementsByClassName("listLI");
 var i;

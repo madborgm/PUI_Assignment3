@@ -66,11 +66,8 @@ li a:hover {
 }
 
 /*hide/show div*/
-.fullList {
-	display: none;
-}
 
-.fullListCancel {
+.fullList {
 	display: none;
 }
 
