@@ -91,8 +91,28 @@ i {
 	display: inline-block;
 	float: right;
 	position: relative;
-	top: 24px;
-	right: 10px;
+	top: 25px;
+	right: 15px;
+}
+
+i:hover {
+	color: #f44336;;
+}
+
+.inline-icon {
+	display: inline-block;
+    float: left;
+    top: 18px;
+    margin-left: 15px;
+    position: relative;
+}
+
+#addGiftBorder {
+	border-bottom: 1px solid #d3d3d3;
+}
+
+a {
+	color: black;
 }
 
 /*form*/

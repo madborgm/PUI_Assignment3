@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>GiftBow</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<div id="listHeader" class="header">
+		<img src="images/logo.png" alt="App Logo" height="50px" width="auto" class="logo">
+	</div>
+	<ul>
+		<li><a href="#home" class="active">Groups</a></li>
+		<li><a href="#home">Gifts</a></li>
+	</ul>
+	<div class="headerDIV">
+		<img src="images/group.png" alt="Group icon" height="24px" width="auto" class="inline-icon">
+		<h1>Add Group</h1>
+		<i class="fa fa-plus-circle"></i>
+	</div>
+	<div class="addMemberList">
+		<div class="addMemberBodyDiv">
+			<input type="text" id="groupCategory" placeholder="Group Category"><br>
+			<input type="text" id="groupBudget" placeholder="Budget $0.00"><br>
+			<span onclick="newGroup()" class="addBtn">Add</span>
+		</div>
+	<a href="groupList.html"> New Page</a>
+<script type="text/javascript">
+	function newGroup() {
+		var inputCategory = document.getElementbyId("groupCategory");
+		localStorage.setItem("groupCategory", inputCategory.value);
+	}
+</script>
+
+</body>
+</html>
