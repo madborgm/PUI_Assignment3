@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>GiftBow</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	</head>
+<body>
+	<div id="listHeader" class="header">
+		<img src="images/logo.png" alt="App Logo" height="50px" width="auto" class="logo">
+	</div>
+	<ul>
+		<li><a href="#home" class="active">Groups</a></li>
+		<li><a href="#home">Gifts</a></li>
+	</ul>
+	<div class="groupNames" id="groupGivenNames">
+		<ul id="groupGivenNamesList" class="groupCategories"></ul>
+	</div>
+	<div class="memberNames" id="memberNamesDiv">
+		<ul id="memberNamesLinkList" class="groupCategories"></ul>
+	</div>
+	<div class="addGroupMemberList" id="addGroupMemberForm">
+		<div class="addGroupMemberBodyDiv">
+			<input type="text" id="groupMemberFName" placeholder="First Name"><br>
+			<input type="text" id="groupMemberLName" placeholder="Last Name"><br>
+			<input type="text" id="groupMemberBudget" placeholder="Budget $0.00"><br>
+			<span onclick="changeButtonBack();saveGroupMemberName(); getGroupMemberName();" class="addBtn" id="addGift">Add</span>
+			
+		</div>
+
+	</div>
+	<span onclick="changeButton();" class="editBtn" id="editMember">Edit Members</span>
+<script src="js/script.js"></script>
+</body>
+</html>

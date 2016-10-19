@@ -139,22 +139,21 @@ input {
 	border: 1px solid #536dfe;
 	font-size: 16px;
 }
-/*
-.cancelBtn {
-	width: 50%;
+
+.editBtn {
+	width: 100%;
 	display: inline-block;
 	float: left;
 	text-align: center;
 	padding: 20px 0px;
 	box-sizing: border-box;
-	border: 1px solid #536dfe;
+	border: 2px solid #536dfe;
 	background-color: white;
 	text-decoration: none;
 	color: #212121;
-	height: 61px;
 	font-size: 16px;
 	font-family: "DIN";
-}*/
+}
 
 /*gifts*/
 #listUL {
@@ -173,3 +172,48 @@ input {
 	padding-left: 225px;
 }
 
+.categoryName {
+	display: block;
+	font-size: 16px;
+}
+
+.groupNames {
+	display: block;
+	height: auto;
+}
+
+.groupCategories {
+	display: block;
+	height: auto;
+	background-color: white;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+ul.groupCategories li {
+	background-color: white;
+	font-size: 18px;
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	width: 44%;
+	
+}
+
+ul#groupGivenNamesList li {
+	margin-bottom: 25px;
+}
+
+ul#groupGivenNamesList li:nth-child(even) {
+	text-align: right;
+}
+
+ul.groupCategories i {
+	top: 0;
+	right: 15px;
+}
+
+.addGroupMemberList {
+	display: none;
+}
