@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>GiftBow</title>
+		<title>Tie-it-Up</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -13,14 +13,14 @@
 		<img src="images/logo.png" alt="App Logo" height="50px" width="auto" class="logo">
 	</div>
 	<ul>
-		<li><a href="#home" class="active">Groups</a></li>
-		<li><a href="#home">Gifts</a></li>
+		<li><a href="addGroup.html" class="active">Groups</a></li>
+		<li><a href="gifts.html">Gifts</a></li>
 	</ul>
 	<div class="groupNames" id="groupGivenNames">
 		<ul id="groupGivenNamesList" class="groupCategories"></ul>
 	</div>
 	<div class="memberNames" id="memberNamesDiv">
-		<ul id="memberNamesLinkList" class="groupCategories"></ul>
+		<ul id="memberNamesLinkList" class="membersCategories groupCategories"></ul>
 	</div>
 	<div class="addGroupMemberList" id="addGroupMemberForm">
 		<div class="addGroupMemberBodyDiv">
@@ -34,5 +34,6 @@
 	</div>
 	<span onclick="changeButton();" class="editBtn" id="editMember">Edit Members</span>
 <script src="js/script.js"></script>
+<script src="js/loadGivenGroupNames.js"></script>
 </body>
 </html>

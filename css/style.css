@@ -65,11 +65,11 @@ li a:hover {
     color: white;
 }
 
-/*hide/show div*/
+/*/show div*/
 
-.fullList {
+/*.fullList {
 	display: none;
-}
+}*/
 
 /*body header*/
 .headerDIV {
@@ -169,7 +169,8 @@ input {
 }
 
 .close {
-	padding-left: 225px;
+	position: relative;
+	left: 200px;
 }
 
 .categoryName {
@@ -216,4 +217,33 @@ ul.groupCategories i {
 
 .addGroupMemberList {
 	display: none;
+}
+
+.bodyDiv {
+	display: none;
+}
+
+ul.groupCategories li a {
+	display: inline-block;
+	padding: 0;
+	position: relative;
+	left: 225px;
+	color: black;
+}
+
+ul.membersCategories li {
+	background-color: white;
+	font-size: 18px;
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+	width: 100%;
+
+}
+
+ul.membersCategories i {
+	top: 0;
+	right: 0;
 }

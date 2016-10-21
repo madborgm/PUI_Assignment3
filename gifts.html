@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>GiftBow</title>
+    <title>Tie-it-Up</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+<!--     <script>
     $(document).ready(function(){
       $("i").click(function(){
-          $(".fullList").show(500);
+          $(".bodyDiv").toggle();
           // console.log("itworked")
       });
     });
-    </script>
+    </script> -->
   </head>
   <body>
   <div id="listHeader" class="header">
@@ -22,26 +22,31 @@
   </div>
 <!--   <div class="navbar"> -->
   <ul>
-    <li><a href="#home">Groups</a></li>
-    <li><a class="active" href="#home">Gifts</a></li>
+    <li><a href="addGroup.html">Groups</a></li>
+    <li><a class="active" href="gifts.html">Gifts</a></li>
   </ul>
 <!--   </div> -->
-
-  <div class="headerDIV">
-    <h1> Steve Anderson</h1>
-    <i class="fa fa-plus-circle"></i>
+  <div class="groupNames" id="memberNameDiv">
+    <ul id="memberNameList" class="groupCategories"></ul>
   </div>
-<div class="fullList">
-  <div class="bodyDIV">
+  <div class="headerDIV">
+    <h1 id="name"> Steve Anderson</h1>
+    <i class="fa fa-plus-circle" id="addGiftIdea"></i>
+  </div>
+    <ul id="listUL">
+    
+  </ul>
+<div>
+  <div id="hideMain" class="bodyDiv">
       <input type="text" id="gname" placeholder="Gift Name"><br>
       <input type="text" id="budget" placeholder="Gift Price ($0.00)"><br>
       <span onclick="newGift()" class="addBtn">Add</span>
-<!--       <button id="hide" class="cancelBtn"> Cancel </button> -->
   </div>
-  <ul id="listUL">
-    
-  </ul>
+<!--       <button id="hide" class="cancelBtn"> Cancel </button> -->
+
+
 </div>
+  <script src="js/loadNames.js"></script>
   <script src="js/script.js"></script>
   </body>
 </html>

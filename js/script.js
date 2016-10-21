@@ -106,6 +106,9 @@ $(document).ready(function(){
     $("#addMember").click(function(){
     	$("#addMemberForm").toggle();
     });
+    $("#addGiftIdea").click(function(){
+    	$("#hideMain").toggle();
+    });
     $("#addCategory").click(function(){
     	$("i").removeClass("fa-minus-circle").addClass("fa-plus-circle");
     });
@@ -129,23 +132,24 @@ $(document).ready(function(){
 	});
 });
 
-function loadGivenGroupNames() {
-        var groupCategoryHeader = localStorage.getItem("groupCategoryName");
-		var groupBudgetHeader = localStorage.getItem("groupBudgetValue");
+// function loadGivenGroupNames() {
+//         var groupCategoryHeader = localStorage.getItem("groupCategoryName");
+// 		var groupBudgetHeader = localStorage.getItem("groupBudgetValue");
 
-		var groupName = document.createElement("LI");
-		var nameText = document.createTextNode(groupCategoryHeader);
-			groupName.appendChild(nameText);
+// 		var groupName = document.createElement("LI");
+// 		var nameText = document.createTextNode(groupCategoryHeader);
+// 			groupName.appendChild(nameText);
 	
-		var budget = document.createElement("LI"); 
-		var number = document.createTextNode(groupBudgetHeader);
-			budget.appendChild(number);
+// 		var budget = document.createElement("LI"); 
+// 		var number = document.createTextNode(groupBudgetHeader);
+// 			budget.appendChild(number);
 
-		list = document.getElementById("groupGivenNamesList");
-		list.appendChild(groupName);
-		list.appendChild(budget);    
-    };
-window.onload = loadGivenGroupNames;
+// 		list = document.getElementById("groupGivenNamesList");
+// 		list.appendChild(groupName);
+// 		list.appendChild(budget);    
+//     };
+// window.onload = loadGivenGroupNames;
+
 
 function saveGroupMemberName() {
 	var groupMemberFirstName = document.getElementById("groupMemberFName");
@@ -154,6 +158,10 @@ function saveGroupMemberName() {
 	var groupMemberLastName = document.getElementById("groupMemberLName");
 	localStorage.setItem("memberLastName", groupMemberLastName.value);
 
+	var groupMemberBudget = document.getElementById("groupMemberBudget");
+	localStorage.setItem("memberBudget", groupMemberBudget.value);
+
+	groupMemberBudget.value = "";
 	groupMemberFirstName.value = "";
 	groupMemberLastName.value = "";
 }
@@ -166,17 +174,53 @@ function getGroupMemberName() {
 	var fullNameText = document.createTextNode(firstName + " " + lastName);
 	fullName.appendChild(fullNameText);
 
+
+
+	var nameLink = document.createElement('a');
+		nameLink.setAttribute('href', "gifts.html");
+	var goToGifts = document.createElement("I");
+	goToGifts.className = "fa fa-plus-circle";
+	nameLink.appendChild(goToGifts)
+	fullName.appendChild(nameLink);
+
 	namesList = document.getElementById("memberNamesLinkList");
 	namesList.appendChild(fullName);
-
 }
 
+
+
 function changeButton() {
-	document.getElementById("editMember").innerHTML = "Cancel";
+
+	if (document.getElementById("editMember").innerHTML == "Edit Members") {
+		document.getElementById("editMember").innerHTML = "Cancel";
+	} else {
+		document.getElementById("editMember").innerHTML = "Edit Members";
+	};
+	
 }
 
 function changeButtonBack() {
-	document.getElementById("editMember").innerHTML = "Edit Member";
-}
+	if (document.getElementById("editMember").innerHTML == "Cancel") {
+		document.getElementById("editMember").innerHTML = "Edit Members";
+	} else {
+		document.getElementById("editMember").innerHTML = "Cancel"
+	};
+};
 
+
+// function loadGivenMemberName() {
+// 	var firstName = localStorage.getItem("memberFirstName");
+// 	var lastName = localStorage.getItem("memberLastName");
+// 	var allotment = localStorage.getItem("memberBudget");
+
+// 	var fullNameAndBudget = document.createElement("LI");
+// 	var fullNameText = document.createTextNode(firstName + " " + lastName);
+// 	var fullAllotment = document.createTextNode(allotment);
+// 	var nameAndBudget = document.createTextNode(fullNameText + " " + fullAllotment)
+// 	fullNameAndBudget.appendChild(nameAndBudget);
+
+// 	memberlist = document.getElementById("memberNameList");
+
+// 	memberlist.appendChild(fullNameAndBudget);
+// };
 
